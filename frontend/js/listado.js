@@ -17,37 +17,33 @@ async function obtenerUsuarios() {
                     'render': function (data, type, row) {
                         let respuesta = '';
                         switch (data) {
-                            case 'masc':
+                            case 'M':
                                 respuesta = 'Masculino';
                                 break;
-                            case 'fem':
+                            case 'F':
                                 respuesta = 'Femenino';
                                 break;
-                            case 'otro':
+                            case 'O':
                                 respuesta = 'Otro';
                                 break;
+                            default:
+                                respuesta = data;
                         }
                         return respuesta;
                     }
                 },
                 { data: 'fechaNacimiento' },
-                { data: 'gentilicio[0].nombre' }
+                { data: 'gentilicio[0].nombre' },
+                // Se agrega el botón que redirige al detalle de la cuenta
+                {
+                    data: null,
+                    'render': function (data, type, row) {
+                        return `<a href="./cuentas.html?id=${row._id}" class="btn btn-primary btn-sm">Ver Cuenta</a>`;
+                    }
+                }
             ]
         });
     } catch (error) {
         console.log('Error al obtener los datos: ', error)
     }
-}
-
-function cargarGenero(genero) {
-    respuesta = '';
-    switch (genero) {
-        case 'masc':
-            respuesta = 'Masculino';
-        case 'fem':
-            respuesta = 'Femenino';
-        case 'otro':
-            respuesta = 'Otro';
-    }
-    return respuesta;
 }

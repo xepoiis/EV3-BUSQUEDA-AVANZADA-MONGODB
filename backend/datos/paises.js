@@ -1,10 +1,10 @@
 // ===============================================
-// Base de datos: IEI_N3_C2
+// Base de datos: Jose_Galdamez
 // Colección: paises
 // Script completo países del mundo para MongoDB
 // ===============================================
 
-use("IEI_N3_C2");
+use("Jose_Galdamez");
 
 db.createCollection("paises");
 

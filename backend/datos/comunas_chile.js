@@ -1,10 +1,10 @@
 // ===============================================
-// Base de datos: IEI_N3_C2
+// Base de datos: Jose_Galdamez
 // Colección: comunas
 // Script completo comunas de Chile para MongoDB
 // ===============================================
 
-use("IEI_N3_C2");
+use("Jose_Galdamez");
 
 db.createCollection("comunas");
 

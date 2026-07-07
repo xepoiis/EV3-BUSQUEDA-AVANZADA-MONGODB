@@ -44,7 +44,7 @@
         <br>
 
         <form id="formularioRegistro">
-            <p class="h1">Formulario de Registro</p>
+            <p class="h1">Formulario de Registro y Cuenta Bancaria</p>
             <hr>
 
             <div class="container">
@@ -139,8 +139,8 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="input_numero" class="form-label">Número:</label>
-                        <input type="text" class="form-control" name="numero" id="input_numero">
+                        <label for="input_numero" class="form-label">* Número:</label>
+                        <input type="text" class="form-control" name="numero" id="input_numero" onchange="validarInput(this)">
                     </div>
 
                     <div class="col">
@@ -151,6 +151,73 @@
                     <div class="col">
                         <label for="input_codigoPostal" class="form-label">Código Postal:</label>
                         <input type="text" class="form-control" name="codigoPostal" id="input_codigoPostal">
+                    </div>
+                </div>
+                <br>
+                <hr>
+
+                <p class="h3">Cuenta Bancaria</p>
+                <br>
+                
+                <div class="row">
+                    <div class="col">
+                        <label for="inputBanco" class="form-label">* Banco:</label>
+                        <input type="text" class="form-control" name="banco" id="inputBanco" onchange="validarInput(this)">
+                    </div>
+                    <div class="col">
+                        <label for="selectTipoCuenta" class="form-label">* Tipo de Cuenta:</label>
+                        <select class="form-select" name="tipoCuenta" id="selectTipoCuenta" onchange="validarInput(this)">
+                            <option selected value="">Seleccione...</option>
+                            <option value="Corriente">Corriente</option>
+                            <option value="Vista">Vista</option>
+                            <option value="Ahorro">Ahorro</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="inputNumeroCuenta" class="form-label">* Número de Cuenta:</label>
+                        <input type="text" class="form-control" name="numeroCuenta" id="inputNumeroCuenta" onchange="validarInput(this)">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="selectMoneda" class="form-label">* Moneda:</label>
+                        <select class="form-select" name="moneda" id="selectMoneda" onchange="validarInput(this)">
+                            <option selected value="">Seleccione...</option>
+                            <option value="CLP">CLP - Peso Chileno</option>
+                            <option value="USD">USD - Dólar</option>
+                            <option value="EUR">EUR - Euro</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="inputSaldo" class="form-label">* Saldo Inicial:</label>
+                        <input type="number" class="form-control" name="saldo" id="inputSaldo" onchange="validarInput(this)">
+                    </div>
+                    <div class="col">
+                        <label for="inputFechaApertura" class="form-label">* Fecha de Apertura:</label>
+                        <input type="date" class="form-control" name="fechaApertura" id="inputFechaApertura" onchange="validarInput(this)">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="selectEstadoCuenta" class="form-label">* Estado:</label>
+                        <select class="form-select" name="estado" id="selectEstadoCuenta" onchange="validarInput(this)">
+                            <option selected value="">Seleccione...</option>
+                            <option value="Activa">Activa</option>
+                            <option value="Inactiva">Inactiva</option>
+                            <option value="Bloqueada">Bloqueada</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="inputSucursal" class="form-label">Sucursal:</label>
+                        <input type="text" class="form-control" name="sucursal" id="inputSucursal">
+                    </div>
+                    <div class="col">
+                        <label for="inputTitular" class="form-label">* Titular (Nombre):</label>
+                        <input type="text" class="form-control" name="titular" id="inputTitular" onchange="validarInput(this)">
                     </div>
                 </div>
                 <br>
